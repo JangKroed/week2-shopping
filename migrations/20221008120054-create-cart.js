@@ -1,24 +1,21 @@
 "use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("Users", {
-      userId: {
-        // Null 금지
+    await queryInterface.createTable("Carts", {
+      cartId: {
         allowNull: false,
-        // Id값 1씩 증가
         autoIncrement: true,
-        // 기본키 설정
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      email: {
-        type: Sequelize.STRING,
+      userId: {
+        type: Sequelize.INTEGER,
       },
-      nickname: {
-        type: Sequelize.STRING,
+      goodsId: {
+        type: Sequelize.INTEGER,
       },
-      password: {
-        type: Sequelize.STRING,
+      quantity: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
@@ -31,6 +28,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("Users");
+    await queryInterface.dropTable("Carts");
   },
 };
