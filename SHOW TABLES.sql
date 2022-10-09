@@ -41,14 +41,14 @@
 --     PRIMARY KEY (id)
 -- );
 -- 데이터 삽입
-INSERT INTO Goods (name, thumbnailUrl, category, price)
-VALUES (
-        '상품',
-        "https://cdn.pixabay.com/photo/2014/08/26/19/19/wine-428316_1280.jpg",
-        "drink",
-        0.11
-    );
+-- INSERT INTO Goods (name, thumbnailUrl, category, price)
+-- VALUES (
+--         '상품',
+--         "https://cdn.pixabay.com/photo/2014/08/26/19/19/wine-428316_1280.jpg",
+--         "drink",
+--         0.11
+--     );
 -- 데이터 조회
--- SELECT * FROM Goods;
+SELECT * FROM Goods;
 -- 테이블 삭제
 -- DROP TABLE Goods;
